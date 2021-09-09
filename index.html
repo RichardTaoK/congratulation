@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: #FFD100;
+        /* display: flex; */
+        /* justify-content: center; */
+    }
+    
+    #demo {
+        text-align: center;
+        font-size: 30px;
+        height: 100%;
+        vertical-align: center;
+        width: 100%;
+        position: absolute;
+    }
+    #text{
+        position: absolute;
+        top: 50%;
+
+        border: 1px dashed #ddd;
+        width: 100%;
+        height: 30px;
+    }
+</style>
+<body>
+    <div id="demo">
+        <div id="text"></div>
+    </div>
+</body>
+<script>
+    var  congratulation = document.getElementById('text');
+    getInnerText = function(index){
+        var count = ['我不会，但我可以学;我会了，但我可以继续学...','既往不恋，坚持锻炼(｡･ω･｡)ﾉ<text style="color:red">❤</text>','最近有谣言说你喜欢快驴，我替你澄清一下，那不是谣言！！！','把正确的事变成容易的事!(*^ω^*)','你每次加班都是为了想要的生活努力!','<text style="color:red">❤</text>少谈一点代码，多谈一点恋爱<text style="color:red">❤</text>','<text style="color:red">(≧∇≦)/</text>对快驴越有信心，对工作越有耐心<text style="color:red">(≧∇≦)/</text>','<text style="color:red">❤</text>以客户为中心，每天都开心<text style="color:red">❤</text>','一个人可以写出1个bug，一群人可以写出很多bug','❤️甜练基本功❤️','快驴加鞭，纵情向前','❤️祝你早日脱单，你个单身狗！如果已有伴侣，当我没说❤️','希望你的可爱可以治愈所有的不快~~','😄熬夜对身体不好，所以我建议你通宵😄','你知道快驴的缺点是什么吗，是缺点你呀~🍬🍬🍬🍬🍬']
+        return count[index];
+    }
+    const randomNum = Math.ceil(Math.random()*14);
+    congratulation.innerHTML = getInnerText(randomNum);
+</script>
+</html>
